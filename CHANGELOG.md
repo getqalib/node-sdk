@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] - 2024-01-XX
 
 ### Added
+
 - Initial release of Qalib Node.js SDK
 - Support for synchronous and asynchronous rendering modes
 - `Renders` resource with `create()`, `get()`, `waitFor()`, and `createAndWait()` methods
@@ -21,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Complete documentation and examples
 
 ### Features
+
 - **Sync Mode**: Immediate rendering with results returned before request completes
 - **Async Mode**: Background rendering with polling support
 - **Smart Polling**: Automatic status checking with configurable intervals and timeouts
