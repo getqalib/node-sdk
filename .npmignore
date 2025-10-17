@@ -40,8 +40,8 @@ tsconfig.json
 .env
 .env.*
 
-# Examples (keep for npm package)
-# examples/
+# Examples
+examples/
 
 # Logs
 *.log
