@@ -66,10 +66,10 @@ Test the package locally before publishing:
 npm link
 
 # In a test project
-npm link @qalib/node-sdk
+npm link qalib-node
 
 # Test it
-node -e "const Qalib = require('@qalib/node-sdk'); console.log(Qalib)"
+node -e "const Qalib = require('qalib-node'); console.log(Qalib)"
 ```
 
 ### 5. Update Version
@@ -105,7 +105,7 @@ Add release notes to `CHANGELOG.md`:
 
 ### First-Time Setup (if using scoped package)
 
-If publishing `@qalib/node-sdk` for the first time:
+If publishing `qalib-node` for the first time:
 
 ```bash
 npm publish --access public
@@ -194,7 +194,7 @@ npm publish --tag beta
 
 Users can install with:
 ```bash
-npm install @qalib/node-sdk@beta
+npm install qalib-node@beta
 ```
 
 ## Unpublishing (Emergency Only)
@@ -208,10 +208,10 @@ Only unpublish if:
 
 ```bash
 # Unpublish specific version
-npm unpublish @qalib/node-sdk@1.0.0
+npm unpublish qalib-node@1.0.0
 
 # Unpublish entire package (discouraged)
-npm unpublish @qalib/node-sdk --force
+npm unpublish qalib-node --force
 ```
 
 Better approach: Publish a new patch version with the fix.
@@ -221,7 +221,7 @@ Better approach: Publish a new patch version with the fix.
 Instead of unpublishing, deprecate old versions:
 
 ```bash
-npm deprecate @qalib/node-sdk@1.0.0 "This version has a critical bug. Please upgrade to 1.0.1+"
+npm deprecate qalib-node@1.0.0 "This version has a critical bug. Please upgrade to 1.0.1+"
 ```
 
 ## Post-Publish Verification
@@ -230,7 +230,7 @@ After publishing:
 
 ### 1. Verify on npm
 
-Visit: https://www.npmjs.com/package/@qalib/node-sdk
+Visit: https://www.npmjs.com/package/qalib-node
 
 Check:
 - Version number is correct
@@ -244,10 +244,10 @@ In a new directory:
 
 ```bash
 npm init -y
-npm install @qalib/node-sdk
+npm install qalib-node
 
 # Test it works
-node -e "const Qalib = require('@qalib/node-sdk'); console.log('Version:', Qalib.version)"
+node -e "const Qalib = require('qalib-node'); console.log('Version:', Qalib.version)"
 ```
 
 ### 3. Verify TypeScript Definitions
@@ -255,7 +255,7 @@ node -e "const Qalib = require('@qalib/node-sdk'); console.log('Version:', Qalib
 In a TypeScript project:
 
 ```bash
-npm install @qalib/node-sdk
+npm install qalib-node
 npx tsc --noEmit
 ```
 
@@ -355,13 +355,13 @@ npm version patch|minor|major
 npm publish
 
 # View published package
-npm view @qalib/node-sdk
+npm view qalib-node
 
 # Check latest version
-npm show @qalib/node-sdk version
+npm show qalib-node version
 
 # Download stats
-npm view @qalib/node-sdk downloads
+npm view qalib-node downloads
 ```
 
 ## Support

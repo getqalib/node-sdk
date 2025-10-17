@@ -76,21 +76,21 @@ cd /path/to/test-project
 npm install /path/to/qalib-node-sdk/qalib-node-sdk-1.0.0.tgz
 
 # Test it
-node -e "const Qalib = require('@qalib/node-sdk'); console.log(Qalib)"
+node -e "const Qalib = require('qalib-node'); console.log(Qalib)"
 ```
 
 ## After Publishing
 
-Verify on npm: https://www.npmjs.com/package/@qalib/node-sdk
+Verify on npm: https://www.npmjs.com/package/qalib-node
 
 Test installation:
 ```bash
-npm install @qalib/node-sdk
+npm install qalib-node
 ```
 
 ## Package Information
 
-- **Package Name**: `@qalib/node-sdk`
+- **Package Name**: `qalib-node`
 - **Main File**: `src/index.js`
 - **TypeScript**: `types/index.d.ts`
 - **License**: MIT
@@ -117,13 +117,13 @@ npm run verify
 npm run pack-preview
 
 # View published package info
-npm view @qalib/node-sdk
+npm view qalib-node
 
 # Check latest version
-npm show @qalib/node-sdk version
+npm show qalib-node-sdk version
 
 # See download stats
-npm view @qalib/node-sdk downloads
+npm view qalib-node downloads
 ```
 
 ## Common Issues

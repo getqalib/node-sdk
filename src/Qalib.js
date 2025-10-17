@@ -5,7 +5,7 @@ const Client = require('./client');
  * Official Node.js client for the Qalib API
  *
  * @example
- * const Qalib = require('@qalib/node-sdk');
+ * const Qalib = require('qalib-node');
  *
  * // Initialize with sync mode
  * const qalib = new Qalib({

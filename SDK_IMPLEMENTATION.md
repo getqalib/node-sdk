@@ -266,7 +266,7 @@ await qalib.renders.waitFor(async.id);
 ## Error Handling Best Practices
 
 ```javascript
-const Qalib = require('@qalib/node-sdk');
+const Qalib = require('qalib-node');
 
 try {
   const render = await qalib.renders.create(templateId, variables);
@@ -306,7 +306,7 @@ import Qalib, {
   Render,
   Template,
   RenderCreateOptions
-} from '@qalib/node-sdk';
+} from 'qalib-node';
 
 const qalib = new Qalib({
   apiKey: process.env.QALIB_API_KEY!,
@@ -369,7 +369,7 @@ npm publish --access public
 
 ### Installation by Users
 ```bash
-npm install @qalib/node-sdk
+npm install qalib-node
 ```
 
 ## Examples

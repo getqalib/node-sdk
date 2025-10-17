@@ -2,19 +2,19 @@
 
 Official Node.js SDK for Qalib - Dynamic Image Generation API
 
-[![npm version](https://img.shields.io/npm/v/@qalib/node-sdk.svg)](https://www.npmjs.com/package/@qalib/node-sdk)
+[![npm version](https://img.shields.io/npm/v/qalib-node.svg)](https://www.npmjs.com/package/qalib-node)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Installation
 
 ```bash
-npm install @qalib/node-sdk
+npm install qalib-node
 ```
 
 ## Quick Start
 
 ```javascript
-const Qalib = require('@qalib/node-sdk');
+const Qalib = require('qalib-node');
 
 // Initialize the client
 const qalib = new Qalib({
@@ -193,7 +193,7 @@ qalib.setMode('async'); // Switch to async mode
 The SDK provides specific error classes for different scenarios:
 
 ```javascript
-const Qalib = require('@qalib/node-sdk');
+const Qalib = require('qalib-node');
 
 try {
   const render = await qalib.renderImage(templateId, variables);
@@ -298,7 +298,7 @@ node examples/list-templates.js
 Full TypeScript definitions included:
 
 ```typescript
-import Qalib, { Variable, Render } from '@qalib/node-sdk';
+import Qalib, { Variable, Render } from 'qalib-node';
 
 const qalib = new Qalib({
   apiKey: process.env.QALIB_API_KEY!,

@@ -1,6 +1,6 @@
-// TypeScript definitions for @qalib/node-sdk
+// TypeScript definitions for qalib-node
 
-declare module '@qalib/node-sdk' {
+declare module 'qalib-node' {
   /**
    * Qalib configuration options
    */
