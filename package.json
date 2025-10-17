@@ -1,0 +1,51 @@
+{
+  "name": "@qalib/node-sdk",
+  "version": "1.0.0",
+  "description": "Official Node.js SDK for Qalib - Dynamic Image Generation API",
+  "main": "src/index.js",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "prepublishOnly": "npm run verify",
+    "verify": "node -e \"require('./src/index.js'); console.log('✓ Package loads successfully')\"",
+    "pack-preview": "npm pack --dry-run",
+    "version": "echo 'Version updated to' $npm_package_version"
+  },
+  "keywords": [
+    "qalib",
+    "image",
+    "generation",
+    "api",
+    "sdk",
+    "dynamic-images",
+    "template",
+    "rendering",
+    "node",
+    "nodejs",
+    "typescript"
+  ],
+  "author": "Qalib <support@getqalib.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qalib/qalib-node-sdk.git"
+  },
+  "homepage": "https://getqalib.com",
+  "bugs": {
+    "url": "https://github.com/qalib/qalib-node-sdk/issues"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {},
+  "files": [
+    "src/",
+    "types/",
+    "examples/",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ]
+}
