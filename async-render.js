@@ -5,7 +5,7 @@
  * Async mode queues the render and returns immediately, allowing you to poll for completion.
  */
 
-const Qalib = require("../src/index");
+const Qalib = require("./src/index");
 
 async function main() {
   // Initialize Qalib in async mode (default)
