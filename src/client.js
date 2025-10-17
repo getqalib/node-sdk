@@ -1,4 +1,4 @@
-const axios = require('axios');
+const axios = require("axios");
 const {
   AuthenticationError,
   ValidationError,
@@ -8,7 +8,7 @@ const {
   RateLimitError,
   APIError,
   TimeoutError,
-} = require('./errors');
+} = require("./errors");
 
 /**
  * HTTP Client for Qalib API
@@ -16,16 +16,18 @@ const {
 class Client {
   constructor(config) {
     this.apiKey = config.apiKey;
-    this.baseURL = config.baseURL || 'https://api.getqalib.com/v1';
+    this.baseURL = config.baseURL || "https://api.getqalib.com/v1";
     this.timeout = config.timeout || 30000; // 30 seconds default
-    this.mode = config.mode || 'async'; // 'sync' or 'async'
+    this.mode = config.mode || "async"; // 'sync' or 'async'
 
     if (!this.apiKey) {
-      throw new AuthenticationError('API key is required');
+      throw new AuthenticationError("API key is required");
     }
 
-    if (!this.apiKey.startsWith('qk_')) {
-      throw new AuthenticationError('Invalid API key format. API key must start with "qk_"');
+    if (!this.apiKey.startsWith("qk_")) {
+      throw new AuthenticationError(
+        'Invalid API key format. API key must start with "qk_"'
+      );
     }
 
     // Create axios instance
@@ -33,9 +35,9 @@ class Client {
       baseURL: this.baseURL,
       timeout: this.timeout,
       headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${this.apiKey}`,
-        'User-Agent': 'qalib-node-sdk/1.0.0',
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${this.apiKey}`,
+        "User-Agent": "qalib-node-sdk/1.0.0",
       },
     });
 
@@ -50,21 +52,21 @@ class Client {
    * Handle API errors and convert to custom error classes
    */
   _handleError(error) {
-    if (error.code === 'ECONNABORTED') {
-      throw new TimeoutError('Request timeout');
+    if (error.code === "ECONNABORTED") {
+      throw new TimeoutError("Request timeout");
     }
 
     if (!error.response) {
       throw new APIError(
-        error.message || 'Network error occurred',
+        error.message || "Network error occurred",
         500,
-        'NETWORK_ERROR'
+        "NETWORK_ERROR"
       );
     }
 
     const { status, data } = error.response;
-    const message = data?.message || data?.error || 'Unknown error occurred';
-    const code = data?.code || 'UNKNOWN_ERROR';
+    const message = data?.message || data?.error || "Unknown error occurred";
+    const code = data?.code || "UNKNOWN_ERROR";
     const details = data?.details || null;
 
     switch (status) {
